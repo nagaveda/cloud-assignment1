@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">Profits Visualisation:</h1>
+        <canvas id="myChart"></canvas>
+        <h1 style="text-align: center;">Expenditure Visualisation:</h1>
+        <canvas id="myChart2"></canvas>
+    </div>
+    <script>
+        const labels = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+        ];
+
+        const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Profits in 2020($)',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [150, 200, 170, 165, 223, 218],
+        }]
+        };
+        
+        const config = {
+            type: 'line',
+            data: data,
+            options: {}
+        };
+        
+        var myChart = new Chart(document.getElementById('myChart'),config);
+        
+        const labels1 = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+        ];
+
+        const data1 = {
+        labels: labels1,
+        datasets: [{
+            label: 'Expenditure in 2020($)',
+            backgroundColor: 'rgb(100, 199, 200)',
+            borderColor: 'rgb(100, 199, 200)',
+            data: [50, 70, 100, 90, 85, 93],
+        }]
+        };
+        
+        const config1 = {
+            type: 'line',
+            data: data1,
+            options: {}
+        };
+        
+        var myChart1 = new Chart(document.getElementById('myChart2'),config1);
+
+    </script>
+
+
+</body>
+</html>
